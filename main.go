@@ -11,6 +11,8 @@ func main() {
 }
 package sprint
 
+package sprint
+
 import (
 	"fmt"
 	"strings"
@@ -18,14 +20,16 @@ import (
 	"os"
 )
 
-func AddANote(string) error {
+func AddANote(filename string) error {
     file, err := os.OpenFile(fileName, os.O_APPEND|os.O_WRONLY, 0644)
-   
+    
     defer file.Close()
 	
 	reader := bufio.NewReader(os.Stdin)
     input, err := reader.ReadString('\n')
-   
+    if err != nil {
+        return fmt.Errorf("Invalid input: %v", err)
+    }
     input = strings.TrimSpace(input)
     _, err = file.WriteString(input + "\n")
    
