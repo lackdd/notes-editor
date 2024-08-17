@@ -25,6 +25,7 @@ func AddANote(filename string) error {
     
     defer file.Close()
 	
+    fmt.Print("Enter the note: ")
 	reader := bufio.NewReader(os.Stdin)
     input, err := reader.ReadString('\n')
     if err != nil {
