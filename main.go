@@ -8,12 +8,7 @@ import (
 
 func main() {
 	if len(os.Args) != 2 || os.Args[1] == "help" {
-		fmt.Printf(`Hello, to use this tool please add exactly one argument as a textfile's name to the commandline as in './notestool (your_textfile_name)'
-You will be given a menu, where you can choose, which action to take-
-If you choose 1. Show notes, the program will show all the notes in the specified collection.
-If you choose 2. Add a note, the program will let you add a new note to the collection and if the collection doesn't exist, also create it.
-If you choose 3. Delete a note, the program will delete a note in the collection with your specified line.
-Choosing 4. Exit will close the program.`)
+		fmt.Printf(`Hello, to use this tool please add exactly one argument as a collection name to the commandline as in './notestool (your_collection_name)'`)
 		return
 	} else {
 		fmt.Printf("\nHello and welcome to the notes tool.\n")
