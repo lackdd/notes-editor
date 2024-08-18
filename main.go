@@ -14,6 +14,8 @@ func main() {
 			notes.ShowNotes(filename)
 		} else if answer == "2" {
 			notes.AddANote(filename)
+		} else if answer == "3" {
+			notes.DeleteANote(filename)
 		} else if answer == "4" {
 			os.Exit(0)
 		}
