@@ -40,7 +40,7 @@ func DeleteANote(fileName string) error {
 	}
 
 	// waiting for the note number input
-	fmt.Print("Enter the number of the note to delete: ")
+	fmt.Print("Enter the number of the note to delete or 0 to cancel: ")
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
 	if err != nil {

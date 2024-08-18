@@ -16,6 +16,7 @@ func ShowNotes(filename string) {
 	fileScanner := bufio.NewScanner(readFile)
 	fileScanner.Split(bufio.ScanLines)
 
+	fmt.Printf("\nNotes:")
 	for fileScanner.Scan() {
 		fmt.Println(fileScanner.Text())
 	}
