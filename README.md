@@ -1,5 +1,3 @@
-Certainly! Let's start by outlining the command-line notes management tool and then provide the brief description in Markdown.
-
 ### Tool Description
 
 The `notestool` is a command-line application designed to manage collections of short single-line notes. Each collection is stored in a separate database file, where notes can be added, viewed, or removed.
