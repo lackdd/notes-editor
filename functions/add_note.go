@@ -11,7 +11,10 @@ func AddANote(fileName string) error {
 	fmt.Print("Enter the note: ")
     file, err := os.OpenFile(fileName, os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
-        return fmt.Errorf("failed to open file: %v", err)
+        file, err = os.Create(fileName)
+        if err != nil {
+            return fmt.Errorf("failed to create file: %v", err)
+        }
     }
     
     defer file.Close()
