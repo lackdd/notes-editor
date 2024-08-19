@@ -1,4 +1,3 @@
-Certainly! Let's break down the explanation into three parts: what the tool does, its usage with examples, and how the data is stored.
 
 ### 1\. What the Tool Does
 
